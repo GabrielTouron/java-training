@@ -5,7 +5,11 @@ public class LoopTraining {
      * @return the sum of the values, eg: 6
      */
     public static int sum(int[] values) {
-        return 0;
+        int sum = 0;
+        for (int e : values) {
+           sum += e;
+        }
+        return sum;
     }
 
     /**
@@ -13,7 +17,11 @@ public class LoopTraining {
      * @return the concatenation of all values values, eg: "abc"
      */
     public static String concat(String[] values) {
-        return "";
+        String concatString = "";
+        for (String e : values) {
+            concatString += e;
+        }
+        return concatString;
     }
 
     /**
@@ -21,6 +29,11 @@ public class LoopTraining {
      * @return if the array contains an even value, eg: false
      */
     public static boolean hasEven(int[] values) {
+        for (int e : values) {
+            if (e % 2 == 0) {
+                return true;
+            }
+        }
         return false;
     }
 
@@ -30,7 +43,13 @@ public class LoopTraining {
      * @return the index of the searched value or -1 if the value isn't present, eg: 1
      */
     public static int indexOf(int[] values, int search) {
-        return 0;
+        int index = -1;
+        for (int i=0; i < values.length; i++) {
+            if (values[i] == search) {
+                return index = i;
+            }
+        }
+        return index;
     }
 
     /**
@@ -39,7 +58,11 @@ public class LoopTraining {
      * @return how many times the searched value occurred, eg: 2
      */
     public static int count(int[] values, int search) {
-        return 0;
+        int count = 0;
+        for (int value : values) {
+            if (value == search) count++;
+        }
+        return count;
     }
 
     /**
@@ -48,6 +71,9 @@ public class LoopTraining {
      * @return add the increment to each value of the array, eg: {3, 4, 5}
      */
     public static int[] incrementEach(int[] values, int increment) {
-        return null;
+        for (int i=0; i < values.length; i++) {
+            values[i] += increment;
+        }
+        return values;
     }
 }
